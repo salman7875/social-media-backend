@@ -23,7 +23,7 @@ const getAllUsers = async (req, res) => {
 
 const getCurrentUser = async (req, res) => {
   try {
-    const user = await User.findById(req.params.id)
+    const user = await User.findById(req.user)
     if (!user) {
       return res.status(404).json({
         success: false,

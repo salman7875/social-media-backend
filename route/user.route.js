@@ -12,5 +12,6 @@ router.post('/actions/:id', checkAuthToken, followUnfollow)
 router.get('/current', checkAuthToken, getCurrentUser)
 router.get('/users', getAllUsers)
 router.get('/:id', getUser)
+router.get('/current', checkAuthToken, getCurrentUser)
 
 module.exports = router

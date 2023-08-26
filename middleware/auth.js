@@ -19,6 +19,11 @@ const checkAuthToken = async (req, res, next) => {
         req.user = data.id
       }
     })
+  } else {
+    res.status(400).json({
+      success: false,
+      message: 'No Token!'
+    })
   }
   next()
 }
